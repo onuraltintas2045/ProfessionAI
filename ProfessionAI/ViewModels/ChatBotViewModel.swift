@@ -14,7 +14,7 @@ class ChatBotViewModel: ObservableObject {
     var previousResponse: String = ""
     func getDataFromAPI(prompt: String, completion: @escaping (Result<MessageModel,Error>) -> Void){
         let aiClient = OpenAI(apiToken: apiKey)
-        let query = ChatQuery(model: "gpt-3.5-turbo",
+        let query = ChatQuery(model: "gpt-4-turbo",
                               messages:
                                 [.init(role: .system, content: "You are a doctor"),
                                  .init(role: .assistant, content: self.previousResponse),

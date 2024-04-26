@@ -59,7 +59,7 @@ struct ChatBotView: View {
                     Button(action: {
                         
                         messageList.append(MessageModel(text: question, owner: .Person))
-                        viewModel.getDataFromAPI(prompt: question) { result in
+                        viewModel.getDataFromAPI(prompt: promptMaker(prompt: question)) { result in
                             switch result {
                             case .success(let response):
                                 messageList.append(response)
@@ -88,7 +88,12 @@ struct ChatBotView: View {
     func promptMaker(prompt: String) -> String {
         let newPrompt = """
         I want you to answer the text given below in 3 single quotes like a \(profession.role).
-        Do your research as a doctor. State that it would be better to consult an expert on matters that require expertise.
+        Be sure to give your answers as short but detailed as possible.
+        On matters that require expertise, 'I recommend that you consult an expert on this subject.' give the message.
+        If it is a question that needs to be itemized, give the answer in items.
+        You should not put your answer in quotation marks.
+        Detect text language and respond in that language.
+        You can produce answers according to the countries where that language is used.
         text: '''\(prompt)'''
         """
         return newPrompt
