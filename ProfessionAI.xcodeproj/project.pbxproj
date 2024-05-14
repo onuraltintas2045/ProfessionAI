@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		834200072BF3C085006BBC84 /* GPTResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834200062BF3C085006BBC84 /* GPTResultModel.swift */; };
+		834200092BF3C0FD006BBC84 /* GPTRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834200082BF3C0FD006BBC84 /* GPTRequestModel.swift */; };
 		836077152BB8DF0000ADAFF3 /* OpenAI in Frameworks */ = {isa = PBXBuildFile; productRef = 836077142BB8DF0000ADAFF3 /* OpenAI */; };
 		836077172BB91FA200ADAFF3 /* GPTModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836077162BB91FA200ADAFF3 /* GPTModel.swift */; };
 		8390AA7F2BBDFB5B00DC25A4 /* ProfessionalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8390AA7E2BBDFB5B00DC25A4 /* ProfessionalList.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		834200062BF3C085006BBC84 /* GPTResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTResultModel.swift; sourceTree = "<group>"; };
+		834200082BF3C0FD006BBC84 /* GPTRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTRequestModel.swift; sourceTree = "<group>"; };
 		836077162BB91FA200ADAFF3 /* GPTModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTModel.swift; sourceTree = "<group>"; };
 		8390AA7E2BBDFB5B00DC25A4 /* ProfessionalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfessionalList.swift; sourceTree = "<group>"; };
 		8390AA802BBE072A00DC25A4 /* ProfListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfListView.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				83C3CC902BB8BFC50043B83B /* MessageModel.swift */,
 				836077162BB91FA200ADAFF3 /* GPTModel.swift */,
 				8390AA7E2BBDFB5B00DC25A4 /* ProfessionalList.swift */,
+				834200062BF3C085006BBC84 /* GPTResultModel.swift */,
+				834200082BF3C0FD006BBC84 /* GPTRequestModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -210,7 +216,9 @@
 				83C3CC952BB8C9160043B83B /* ChatBotViewModel.swift in Sources */,
 				8392C6BA2BB52E2800353998 /* ContentView.swift in Sources */,
 				83C3CC932BB8C02B0043B83B /* MessageView.swift in Sources */,
+				834200092BF3C0FD006BBC84 /* GPTRequestModel.swift in Sources */,
 				83C3CC912BB8BFC50043B83B /* MessageModel.swift in Sources */,
+				834200072BF3C085006BBC84 /* GPTResultModel.swift in Sources */,
 				8392C6CB2BB53B7800353998 /* ProfessionView.swift in Sources */,
 				8392C6B82BB52E2800353998 /* ProfessionAIApp.swift in Sources */,
 				8392C6CD2BB5448500353998 /* AddProfessionView.swift in Sources */,

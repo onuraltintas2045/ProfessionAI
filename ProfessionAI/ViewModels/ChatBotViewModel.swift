@@ -12,11 +12,11 @@ class ChatBotViewModel: ObservableObject {
     var apiKey = "YOUR_API_KEY"
     var gptResponse: String = ""
     var previousResponse: String = ""
-    func getDataFromAPI(prompt: String, completion: @escaping (Result<MessageModel,Error>) -> Void){
+    func getDataFromAPI(prompt: String, profesionRole: String, completion: @escaping (Result<MessageModel,Error>) -> Void){
         let aiClient = OpenAI(apiToken: apiKey)
-        let query = ChatQuery(model: "gpt-4-turbo",
+        let query = ChatQuery(model: "gpt-4o",
                               messages:
-                                [.init(role: .system, content: "You are a doctor"),
+                                [.init(role: .system, content: "You are a \(profesionRole)"),
                                  .init(role: .assistant, content: self.previousResponse),
                                 .init(role: .user, content: prompt)],
                               maxTokens: 400)
@@ -36,6 +36,5 @@ class ChatBotViewModel: ObservableObject {
             }
         }
     }
-    
     
 }
