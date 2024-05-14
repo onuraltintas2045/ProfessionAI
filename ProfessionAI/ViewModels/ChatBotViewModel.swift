@@ -14,6 +14,7 @@ class ChatBotViewModel: ObservableObject {
     var previousResponse: String = ""
     func getDataFromAPI(prompt: String, profesionRole: String, completion: @escaping (Result<MessageModel,Error>) -> Void){
         let aiClient = OpenAI(apiToken: apiKey)
+        //GPT4-o Activated
         let query = ChatQuery(model: "gpt-4o",
                               messages:
                                 [.init(role: .system, content: "You are a \(profesionRole)"),

@@ -87,6 +87,7 @@ struct ChatBotView: View {
     
     func promptMaker(prompt: String) -> String {
         let newPrompt = """
+        
         I want you to answer the text given below in 3 single quotes like a \(profession.role).
         If it is a question that needs to be itemized, give the answer in items.
         Do not include quotation marks in your answers.
